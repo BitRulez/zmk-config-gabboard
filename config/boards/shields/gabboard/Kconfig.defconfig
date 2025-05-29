@@ -1,21 +1,21 @@
-if SHIELD_GABBOARD_LEFT
+if SHIELD_DRACULAD_LEFT
 
 config ZMK_KEYBOARD_NAME
-    default "GABBOARD Left"
+    default "DracuLad Left"
 
 config ZMK_SPLIT_BLE_ROLE_CENTRAL
     default y
 
 endif
 
-if SHIELD_GABBOARD_RIGHT
+if SHIELD_DRACULAD_RIGHT
 
 config ZMK_KEYBOARD_NAME
-    default "GABBOARD Right"
+    default "DracuLad Right"
 
 endif
 
-if SHIELD_GABBOARD_LEFT || SHIELD_GABBOARD_RIGHT
+if SHIELD_DRACULAD_LEFT || SHIELD_DRACULAD_RIGHT
 
 config ZMK_SPLIT
     default y
