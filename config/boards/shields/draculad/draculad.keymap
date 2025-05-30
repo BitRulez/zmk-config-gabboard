@@ -15,7 +15,6 @@
 #define FKEYS 3
 #define FKEYS2 4
 #define GAME 5
-#define SMASH 6
 
 /{ 
     behaviors { 
@@ -54,7 +53,7 @@
             &kp Q       &kp W        &kp E       &kp R       &kp T                              &kp J       &kp F       &kp U       &kp P        &kp SEMI 
             &hm LSHFT A  &hms LCTRL S &hm LALT D  &hm LGUI F &kp G                              &kp H       &hm LGUI J &hm LALT K  &hms RCTRL L &hm RSHFT SEMI
             &kp Z       &kp X        &kp C       &kp V       &kp B  &bt BT_SEL 0  &bt BT_SEL 1  &kp N       &kp M       &kp COMMA   &kp DOT      &kp FSLH
-                              &hplt FKEYS DEL &hplt NAV ESC &kp LSHFT                          &mo FKEYS2  &lt NUM SPACE &kp BSPC    
+                              &hplt FKEYS DEL &hplt NAV TAB &hplt NAV SPACE                          &lt NUM ENTER  &lt NUM ENTER &kp BSPC    
             >;
           sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp DOWN UP>;
         };
@@ -101,15 +100,6 @@
             &kp Q       &kp W       &kp E       &kp R       &kp ESC                              &none       &none       &none       &kp F14     &none     
             &kp TAB     &kp S       &kp D       &kp F       &kp V     &tog GAME          &none     &none       &none       &none       &none       &none   
                                     &kp LALT    &kp SPACE   &kp LCTRL                           &none       &none       &none
-            >;
-        };
-
-        SMASH {
-           bindings = <
-            &kp Q       &kp D       &kp W       &kp R       &kp J                              &none       &none       &none       &none       &none    
-            &kp F       &kp A       &kp S       &kp D       &kp G                              &none       &kp N       &kp E       &kp O       &kp I     
-            &kp Z       &kp X       &kp M       &kp C       &kp V     &tog SMASH         &none &none       &none       &none       &none       &none   
-                                    &kp LALT    &kp SPACE   &kp LCTRL                          &none       &kp SPACE   &none
             >;
         };
 
