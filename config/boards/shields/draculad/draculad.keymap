@@ -13,8 +13,7 @@
 #define NAV 1
 #define NUM 2
 #define FKEYS 3
-#define FKEYS2 4
-#define GAME 5
+#define GAME 4
 
 /{ 
     behaviors { 
@@ -82,15 +81,6 @@
             &kp F11     &kp F12     &none       &none       &none                              &none       &none       &none       &none       &none     
             &none       &none       &none       &kp F17     &none     &tog SMASH     &none     &none       &none       &none       &none       &none   
                                     &none       &kp F       &none                              &none       &none       &none
-            >;
-        };
-
-        FKEYS2 {
-           bindings = <
-            &none       &none       &none       &none       &none                              &none       &none       &kp F15     &none       &none    
-            &kp F13     &kp F16     &none       &none       &none                              &none       &none       &none       &kp F14     &none     
-            &none       &none       &none       &none       &none     &none          &none     &none       &none       &none       &none       &none   
-                                    &none       &none       &none                              &none       &none       &none
             >;
         };
 
