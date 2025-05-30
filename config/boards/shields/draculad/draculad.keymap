@@ -27,6 +27,8 @@
             tapping-term-ms = <200>;
             quick-tap-ms = <0>;
             flavor = "balanced";
+            bindings = <&kp>, <&kp>;
+
             hold-while-undecided;
             hold-while-undecided-linger;
         };
