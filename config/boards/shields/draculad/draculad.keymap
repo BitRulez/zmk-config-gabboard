@@ -81,10 +81,10 @@
 
         NAV {
             bindings = <
-&none      &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &none  &none  &kp LBKT    &kp RBKT  &kp SQT   &kp GRAVE
-&kp TAB    &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp G  &none  &kp GT      &kp UP    &kp RPAR  &kp LPAR
-&kp CARET  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &none  &none  &bt BT_CLR  &none     &kp LEFT  &kp DOWN   &kp RIGHT  &kp BSLH
-&none      &none            &none            &none            &none  &none
+&kp SLASH        &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp MINUS  &kp LEFT_BRACKET  &kp A                 &kp A         &kp A     &kp RIGHT_BRACKET
+&kp ASTERISK     &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp PLUS   &kp LEFT_BRACE    &kp LEFT_PARENTHESIS  &kp UP        &kp RPAR  &kp RIGHT_BRACE
+&kp KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp DOT    &none             &bt BT_CLR            &kp LA(LEFT)  &kp LEFT  &kp DOWN           &kp RIGHT  &kp LA(RIGHT_ARROW)
+&none            &kp KP_COMMA     &kp KP_EQUAL     &none            &none      &kp DEL
             >;
         };
 
