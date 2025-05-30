@@ -49,6 +49,16 @@
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
         };
+
+        q_esc: q_esc {
+            compatible = "zmk,behavior-hold-tap";
+            label = "Q_ESC";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "tap-preferred";
+        };
     };
 
     combos {
@@ -70,16 +80,16 @@
 
         default {
             bindings = <
-&kp Q          &kp W         &kp E       &kp R        &kp T            &kp Y         &kp U         &kp I       &kp O         &kp P
+&q_esc ESC Q   &kp W         &kp E       &kp R        &kp T            &kp Y         &kp U         &kp I       &kp O         &kp P
 &hm LSHFT A    &hms LCTRL S  &hm LALT D  &hm LGUI F   &kp G            &kp H         &hm LGUI J    &hm LALT K  &hms RCTRL L  &hm RSHFT SEMI
 &kp Z          &kp X         &kp C       &kp V        &kp B            &bt BT_SEL 0  &bt BT_SEL 1  &kp N       &kp M         &kp COMMA       &kp DOT  &kp FSLH
-&kp LG(LA(G))  &hplt 2 TAB   &kp SPACE   &lt 3 ENTER  &lt 1 LG(LA(G))  &kp BSPC
+&kp LA(LG(G))  &hplt 2 TAB   &kp SPACE   &lt 3 ENTER  &lt 1 LG(LA(G))  &kp BSPC
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp DOWN UP>;
         };
 
-        NAV {
+        NUM_NAV {
             bindings = <
 &kp SLASH        &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp MINUS  &kp LEFT_BRACKET  &kp A                 &kp A         &kp A     &kp RIGHT_BRACKET
 &kp ASTERISK     &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp PLUS   &kp LEFT_BRACE    &kp LEFT_PARENTHESIS  &kp UP        &kp RPAR  &kp RIGHT_BRACE
