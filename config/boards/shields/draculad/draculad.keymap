@@ -5,18 +5,18 @@
  */
 
 #include <behaviors.dtsi>
-#include "mouse.dtsi"
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/pointing.h>
 
 // Layers
 
 #define DEFAULT 0
-#define NUM_NAV 1
-#define SYMB 2
-#define ANDROID 3
-#define MOUSE 4
+#define NAV 1
+#define NUM 2
+#define FKEYS 3
+#define FKEYS2 4
+#define GAME 5
+#define SMASH 6
 
 / {
     behaviors {
@@ -106,10 +106,10 @@
 
         default {
             bindings = <
-&q_esc ESC Q  &kp W         &kp E        &kp R        &kp T            &kp Y            &kp U         &kp I        &kp O         &kp P
-&hml LSHFT A  &hml LCTRL S  &hml LALT D  &hml LGUI F  &kp G            &kp H            &hmr LGUI J   &hmr LALT K  &hmr RCTRL L  &hmr RSHFT SEMI
-&kp Z         &kp X         &kp C        &kp V        &kp B            &bt BT_SEL 0     &bt BT_SEL 1  &kp N        &kp M         &kp COMMA        &kp DOT  &kp FSLH
-&tog 4        &kp TAB       &kp SPACE    &lt 3 ENTER  &lt 1 LG(LA(G))  &lt 2 BACKSPACE
+&q_esc ESC Q   &kp W         &kp E        &kp R        &kp T            &kp Y            &kp U         &kp I        &kp O         &kp P
+&hml LSHFT A   &hml LCTRL S  &hml LALT D  &hml LGUI F  &kp G            &kp H            &hmr LGUI J   &hmr LALT K  &hmr RCTRL L  &hmr RSHFT SEMI
+&kp Z          &kp X         &kp C        &kp V        &kp B            &bt BT_SEL 0     &bt BT_SEL 1  &kp N        &kp M         &kp COMMA        &kp DOT  &kp FSLH
+&kp LA(LG(G))  &kp TAB       &kp SPACE    &lt 3 ENTER  &lt 1 LG(LA(G))  &lt 2 BACKSPACE
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp DOWN UP>;
@@ -133,21 +133,12 @@
             >;
         };
 
-        ANDROID {
+        Android {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans
-            >;
-        };
-
-        MOUSE {
-            bindings = <
-&trans  &trans  &trans  &trans     &trans     &trans        &trans          &trans          &trans           &trans
-&trans  &trans  &trans  &trans     &trans     &msc SCRL_UP  &mmv MOVE_LEFT  &mmv MOVE_UP    &mmv MOVE_RIGHT  &trans
-&trans  &trans  &trans  &trans     &trans     &trans        &trans          &msc SCRL_DOWN  &mkp MB4         &mmv MOVE_DOWN  &mkp MB5  &trans
-&tog 4  &trans  &trans  &mkp LCLK  &mkp RCLK  &tog 4
             >;
         };
     };
