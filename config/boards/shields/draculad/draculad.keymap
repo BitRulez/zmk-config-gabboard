@@ -8,7 +8,7 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 
-// Layerss
+// Layers
 
 #define DEFAULT 0
 #define NAV 1
@@ -20,6 +20,32 @@
 
 / {
     behaviors {
+        hml: home_row_mod_left {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            require-prior-idle-ms = <150>;
+            tapping-term-ms = <280>;
+            quick-tap-ms = <175>;
+            bindings = <&kp>, <&kp>;
+
+            hold-trigger-key-positions = <17 18 19 20>;
+            hold-trigger-on-release;
+        };
+
+        hmr: home_row_mod_right {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            require-prior-idle-ms = <150>;
+            tapping-term-ms = <280>;
+            quick-tap-ms = <175>;
+            bindings = <&kp>, <&kp>;
+
+            hold-trigger-key-positions = <10 11 12 13>;
+            hold-trigger-on-release;
+        };
+
         hm: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS";
@@ -80,10 +106,10 @@
 
         default {
             bindings = <
-&q_esc ESC Q   &kp W         &kp E       &kp R        &kp T            &kp Y            &kp U         &kp I       &kp O         &kp P
-&hm LSHFT A    &hms LCTRL S  &hm LALT D  &hm LGUI F   &kp G            &kp H            &hm LGUI J    &hm LALT K  &hms RCTRL L  &hm RSHFT SEMI
-&kp Z          &kp X         &kp C       &kp V        &kp B            &bt BT_SEL 0     &bt BT_SEL 1  &kp N       &kp M         &kp COMMA       &kp DOT  &kp FSLH
-&kp LA(LG(G))  &kp TAB       &kp SPACE   &lt 3 ENTER  &lt 1 LG(LA(G))  &lt 2 BACKSPACE
+&q_esc ESC Q   &kp W         &kp E        &kp R        &kp T            &kp Y            &kp U         &kp I        &kp O         &kp P
+&hml LSHFT A   &hml LCTRL S  &hml LALT D  &hml LGUI F  &kp G            &kp H            &hmr LGUI J   &hmr LALT K  &hmr RCTRL L  &hmr RSHFT SEMI
+&kp Z          &kp X         &kp C        &kp V        &kp B            &bt BT_SEL 0     &bt BT_SEL 1  &kp N        &kp M         &kp COMMA        &kp DOT  &kp FSLH
+&kp LA(LG(G))  &kp TAB       &kp SPACE    &lt 3 ENTER  &lt 1 LG(LA(G))  &lt 2 BACKSPACE
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp DOWN UP>;
