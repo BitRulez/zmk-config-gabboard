@@ -4,7 +4,6 @@
 #include <dt-bindings/zmk/pointing.h>
 #include <input/processors.dtsi>
 
-/*
 &mmv {
     acceleration-exponent = <1>;      // 1
     time-to-max-speed-ms = <500>;     // 300
@@ -29,4 +28,4 @@
         layers = <1>;
         input-processors = <&zip_scroll_scaler 3 1>;
     };
-};*/
+};
