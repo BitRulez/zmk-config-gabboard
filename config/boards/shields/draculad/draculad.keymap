@@ -106,7 +106,7 @@
         default {
             bindings = <
 &q_esc ESC Q  &kp W         &kp E        &kp R        &kp T            &kp Y            &kp U         &kp I        &kp O         &kp P
-&hml LSHFT A  &hml LCTRL S  &hml LALT D  &hml LGUI F  &kp G            &kp H            &hmr LGUI J   &hmr LALT K  &hmr RCTRL L  &hmr RSHFT SEMI
+&hms LSHFT A  &hm LCTRL S  &hm LALT D  &hm LGUI F  &kp G            &kp H            &hm LGUI J   &hm LALT K  &hm RCTRL L  &hms RSHFT SEMI
 &kp Z         &kp X         &kp C        &kp V        &kp B            &bt BT_SEL 0     &bt BT_SEL 1  &kp N        &kp M         &kp COMMA        &kp DOT  &kp FSLH
 &lt 4 A       &kp TAB       &kp SPACE    &lt 3 ENTER  &lt 1 LG(LA(G))  &lt 2 BACKSPACE
             >;
